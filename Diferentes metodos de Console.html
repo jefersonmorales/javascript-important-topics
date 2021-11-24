@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+<body>
+    <div class='tittle'>
+        JavaScript, Various Console Methods
+    </div>
+
+    <div class="guide-bottega">
+        <a href="https://inmob.devcamp.com/pt-full-stack-development-javascript-python-react/guide/various-console-methods-javascript">Link de guía</a>
+    </div>
+</body>
+<script>
+    const greeting = 'Hi ';
+    const someObject = {
+        name: 'Jeferson',
+    };
+    const oldUser = 25;
+    console.log(greeting, someObject.name,'. ', 'Your old is: ', oldUser);
+
+
+    const foodRegion = [
+        {name: 'Bandeja Paisa', pais: 'Colombia', ciudad: 'Medellín'},
+        {name: 'Chilaquiles', pais: 'México', ciudad: 'Ciudad de México'},
+        {name: 'Ajiaco', pais: 'Colombia', ciudad: 'Bogotá'},
+        {name: 'Carne Cecina', pais: 'México', ciudad: 'Puebla'},
+    ];
+    console.table(foodRegion);
+
+    
+    console.error('oops');
+    console.warn('Something is about to go wrong');
+</script>
+</html>

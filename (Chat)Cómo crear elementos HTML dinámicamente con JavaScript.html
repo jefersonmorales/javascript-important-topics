@@ -1,0 +1,43 @@
+<!-- Guide_ How to Dynamically Create HTML Elements with JavaScript -->
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+<body>
+    <div class="widget">
+        <div class="chat-wrapper"></div>
+        <input type="text" id="chat-input">
+        <button id="msgBtn" onclick="sendMessage()">Send</button>
+    </div>
+</body>
+<script>
+    function sendMessage() {
+        // Crear un nuevo div para
+        const newDiv = document.createElement('div');
+        // dar una clase al nuevo div para
+        newDiv.classList.add('chatMsg');
+        // tomar el valor del chat-input
+        let chatInput = document.querySelector('#chat-input').value;
+        // convertir de una cadena simple a formato (Objeto de Javascript)
+        const newContent = document.createTextNode(chatInput);
+        newDiv.appendChild(newContent);
+
+        // agregar DOM 
+        const widget = document.querySelector('.widget');
+        // seleccionar en que div quiero que aparezca el mensaje 
+        let chatWrapper = document.querySelector('.chat-wrapper');
+        // cuando pulso el botón, quede vacio el campo 
+        document.querySelector('#chat-input').value = ('');
+
+        // El orden de mensajes 
+        
+        // if (document.querySelectorAll('.chatMsg').length > 0) {
+        //     chatWrapper = document.querySelectorAll('.chatMsg')[0];
+        // }
+
+        widget.insertBefore(newDiv, chatWrapper);
+    }
+</script>
+</html>

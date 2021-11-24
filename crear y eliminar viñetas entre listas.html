@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+
+<style>
+    .pendienteItem:hover {
+      cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="tareasPendientes">
+        <h2>Tareas pendientes</h2>
+        <ul>
+            <li class="pendienteItem">Lavar trastes</li>
+            <li class="pendienteItem">Organizar el cuarto</li>
+            <li class="pendienteItem">Barrer la cocinar</li>
+            <li class="pendienteItem">Lavar el baño</li>
+            <li class="pendienteItem">Pasear el perro</li>
+        </ul>
+    </div>
+
+    <h2>Tareas Completadas</h2>
+    <ul class="tareasCompletadasWrapper">
+        <div class="completadas-footer"></div>
+    </ul>
+</body>
+<script>
+    const tareasPendientes = document.querySelectorAll('.pendienteItem');
+    const tareasCompletadas = document.querySelector('.completado');
+    const tareasCompletadasWrapper = document.querySelector('.tareasCompletadasWrapper');
+    
+    tareasPendientes.forEach(pendiente => pendiente.addEventListener('click', (event) => {
+        let tareaCompletada = document.createElement('li');
+        let pendienteContenido = document.createTextNode(pendiente.textContent);
+        tareaCompletada.appendChild(pendienteContenido);
+        tareasCompletadasWrapper.insertBefore(tareaCompletada, tareasCompletadas);
+        pendiente.remove()
+    }) );   
+</script>
+</html>

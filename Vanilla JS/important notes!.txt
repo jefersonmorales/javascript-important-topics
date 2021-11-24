@@ -1,0 +1,1 @@
+para ver alertas, debemos verlas desde "window" y no de "document"

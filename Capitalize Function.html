@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+<style>
+    .guideLink {
+        text-decoration: none;
+        color: rgb(39, 52, 236);
+    }
+
+    .guideLink:hover {
+        color: #cea135;
+        letter-spacing: 2px;
+    }
+</style>
+<body>
+  <div>Capitalize Function</div>
+  <a class="guideLink" href="https://inmob.devcamp.com/pt-full-stack-development-javascript-python-react/guide/create-capitalize-function-javascript">Guide link</a>
+</body>
+<script>
+    const toCapital = str => {
+        const words = str.split(" ");
+        return words.map(word => word[0].toCapital() + word.slice(1)).join(" ");
+    };
+
+    const shortStr = 'Hi there from Mexico';
+    // console.log(toCapital(shortStr));
+</script>
+</html>

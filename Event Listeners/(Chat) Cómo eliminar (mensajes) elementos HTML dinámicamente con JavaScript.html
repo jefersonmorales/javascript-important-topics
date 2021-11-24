@@ -1,0 +1,38 @@
+<!-- Guide_ How to Dynamically Create HTML Elements with JavaScript -->
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+<body>
+    <div class="widget">
+        <div class="chat-wrapper"></div>
+        <input type="text" id="chat-input">
+        <button id="msgBtn" onclick="sendMessage()">Send</button>
+        <button id="msgBtn" onclick="clearMessages()">Clear Messages</button>
+    </div>
+</body>
+<script>
+    function sendMessage() {
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('chatMsg');
+        let chatInput = document.querySelector('#chat-input').value;
+        const newContent = document.createTextNode(chatInput);
+        newDiv.appendChild(newContent);
+
+        const widget = document.querySelector('.widget');
+        let chatWrapper = document.querySelector('.chat-wrapper');
+        document.querySelector('#chat-input').value = ('');
+
+        widget.insertBefore(newDiv, chatWrapper);
+    }
+
+    function clearMessages() {
+        // Seleccionar cada elemento que tenga cada clase
+        const messages = document.querySelectorAll('.chatMsg');
+        // borrar cada mensaje 
+        messages.forEach(message => message.remove());
+    }
+</script>
+</html>

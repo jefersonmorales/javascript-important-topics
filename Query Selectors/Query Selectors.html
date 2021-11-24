@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+<style>
+    /* .hideElement {
+        visibility: hidden;
+    } */
+
+    .showElement {
+        display: block;
+    }
+</style>
+<body>
+  <!-- <div class="mainHeading showElement">
+      <h1>Hi there!</h1>
+  </div>
+
+  <div class="subHeading showElement">
+      My Amazing subHeading...
+  </div>
+
+  <button onClick="contenttoggle()">Hide heading</button> -->
+
+
+  <div class="widget showElement"> 
+    <div class="mainHeading showElement">
+        <h1>Hi there!</h1>
+    </div>
+  
+    <div class="subHeading showElement">
+        My Amazing subHeading...
+    </div>
+  </div>
+</div>
+
+  <button onClick="contenttoggle()">Hide heading</button>
+</body>
+<script>
+    // querySelectorAll
+    
+    // const headings = document.querySelectorAll('div');
+
+    // function contenttoggle() {
+    //     headings.forEach((heading) => {
+    //     if (heading.classList.contains('showElement')) { 
+    //         heading.classList.remove('showElement');
+    //         heading.classList.add('hideElement');
+    //     } else {
+    //         heading.classList.remove('hideElement');
+    //         heading.classList.add('showElement');
+    //     }
+    //     })
+    // }
+
+    // querySelector
+
+    const widget = document.querySelector('.widget');
+
+        function contenttoggle() {
+        if (widget.classList.contains('showElement')) { 
+            widget.classList.remove('showElement');
+            widget.classList.add('hideElement');
+        } else {
+            widget.classList.remove('hideElement');
+            widget.classList.add('showElement');
+        }
+    }
+    
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+  <style> 
+    .hideElement {
+        visibility: hidden;
+    }
+  </style>
+<body>
+    <p class="items hideElement">Not this one</p>
+    <p class="items">Pick me!</p>
+    <p class="items hideElement">Not quite</p>
+</body>
+<script>
+    const collection = document.getElementsByClassName('items')[1];
+    if (collection.classList.contains('item')) {
+        collection.classList.add('hideElement')
+    }
+</script>
+</html>

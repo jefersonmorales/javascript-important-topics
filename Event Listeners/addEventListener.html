@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+<body>
+    <div id="dateComponent"></div>
+    <button id="dateBtn">Click here for Date</button>
+</body>
+<script>
+    const dateElement = document.getElementById('dateComponent');
+    const dateBtn = document.getElementById('dateBtn');
+
+    dateBtn.addEventListener('click', (event) => {
+        dateElement.innerHTML = Date();
+    })
+</script>
+</html>
